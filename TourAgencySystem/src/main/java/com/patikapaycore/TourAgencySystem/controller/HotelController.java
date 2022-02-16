@@ -1,11 +1,10 @@
 package com.patikapaycore.TourAgencySystem.controller;
-<<<<<<< HEAD
 
 import com.patikapaycore.TourAgencySystem.model.entity.Hotel;
 
-=======
+
 import com.patikapaycore.TourAgencySystem.model.entity.Hotel;
->>>>>>> ef69397 (Entities are created. Traveller dto,mapper,repository,service are implemented.)
+
 import com.patikapaycore.TourAgencySystem.model.HotelDTO;
 import com.patikapaycore.TourAgencySystem.model.mapper.HotelMapper;
 import com.patikapaycore.TourAgencySystem.service.HotelService;
@@ -19,10 +18,6 @@ import javax.validation.constraints.Min;
 import java.util.List;
 import java.util.stream.Collectors;
 
-<<<<<<< HEAD
-
-=======
->>>>>>> ef69397 (Entities are created. Traveller dto,mapper,repository,service are implemented.)
 @Validated
 @RestController
 @RequiredArgsConstructor
