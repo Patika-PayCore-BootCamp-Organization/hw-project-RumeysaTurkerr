@@ -1,7 +1,11 @@
 package com.patikapaycore.TourAgencySystem.service.iml;
 import com.patikapaycore.TourAgencySystem.exception.NotFoundException;
 import com.patikapaycore.TourAgencySystem.model.Address;
-import com.patikapaycore.TourAgencySystem.model.Hotel;
+
+import com.patikapaycore.TourAgencySystem.model.entity.Hotel;
+
+import com.patikapaycore.TourAgencySystem.model.entity.Hotel;
+
 import com.patikapaycore.TourAgencySystem.repository.HotelRepository;
 import com.patikapaycore.TourAgencySystem.service.HotelService;
 import lombok.RequiredArgsConstructor;
@@ -48,8 +52,6 @@ public class HotelServiceImpl implements HotelService {
         return true;
     }
 
-    // java8 playground again :)
-    // ----------------------------------------------------------------------------------
     private List<Address> getAddressCityStartsWith(String prefix) {
         List<Hotel> allAirports = getAllHotels();
         return allAirports.stream()
@@ -95,7 +97,7 @@ public class HotelServiceImpl implements HotelService {
     private void consumeHotelAddresses(Integer airportId) {
         Hotel airport = hotelRepository.getById(airportId);
 
-        // Defining a consumer for airport address list
+
         Consumer<Hotel> airportConsumer = air -> air.getAddresses().forEach(System.out::println);
 
         airportConsumer.accept(airport);
