@@ -84,8 +84,7 @@ public class HotelServiceImpl implements HotelService {
     }
 
     private String getCombinedAddressOfBoth(Hotel hotel1, Hotel hotel2) {
-     
-        
+
         BiFunction<Hotel, Hotel, String> function = (a1, a2) -> a1.getAddresses().get(0).getCity() + "-" + a1.getAddresses().get(0).getStreetCode()
                 + " ------- " +
                 a2.getAddresses().get(0).getCity() + "-" + a2.getAddresses().get(0).getStreetCode();

@@ -23,17 +23,17 @@ public class TourServiceImpl implements TourService {
     @Override
     public Tour getTour(Integer id) {
         Optional<Tour> byId = tourRepository.findById(id);
-        return byId.orElseThrow(() -> new NotFoundException("Flight"));
+        return byId.orElseThrow(() -> new NotFoundException("Tour"));
     }
 
     @Override
-    public void addTour(Tour flight) {
-        tourRepository.save(flight);
+    public void addTour(Tour tour) {
+        tourRepository.save(tour);
     }
 
     @Override
-    public Tour updateTour(Tour flight) {
-        return tourRepository.save(flight);
+    public Tour updateTour(Tour tour) {
+        return tourRepository.save(tour);
     }
 
     @Override

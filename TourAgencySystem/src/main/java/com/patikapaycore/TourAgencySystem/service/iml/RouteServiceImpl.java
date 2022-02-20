@@ -15,7 +15,6 @@ public class RouteServiceImpl implements RouteService {
 
     private final RouteRepository routeRepository;
 
-    private final RouteService airportService;
 
     @Override
     public List<Route> getAllRoutes() {
